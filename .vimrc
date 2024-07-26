@@ -63,3 +63,11 @@ autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && getbufvar(winbuf
 
 colorscheme gruvbox
 set background=dark
+
+" Создаем директорию для swap-файлов
+if !isdirectory($HOME . "/.vim/swapfiles")
+    call mkdir($HOME . "/.vim/swapfiles", "p")
+endif
+
+" Перенаправляем swap-файлы в эту директорию
+set directory=$HOME/.vim/swapfiles//
