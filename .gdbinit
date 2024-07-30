@@ -1,3 +1,4 @@
+set disassembly-flavor intel
 tui enable
 tui layout regs
 winheight src 40
